@@ -1,0 +1,393 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block carrousel %}
+<section class="section-height-mac context-dark">
+    <div data-on="false" data-md-on="true" class="rd-parallax">
+        <div data-speed="0.25" data-type="media" data-url="{% static 'images/tours/cangrejo_1920x900x1.jpg' %}" class="rd-parallax-layer"></div>
+        <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
+        <div class="bg-overlay-darker">
+            <div class="shell section-34 section-md-100 section-lg-top-170 section-lg-bottom-165">
+            <h1 class="veil reveal-md-inline-block">{% trans "All Tours For You" %}</h1>
+            <div class="offset-top-4">
+                <h6 class="text-italic">650 {% trans "tours found" %}</h6>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+{% endblock carrousel %}
+
+{% block contents %}
+<section class="section-80 bg-wild-wand">
+    <div class="shell">
+    <div class="range range-xs-center">
+        <div class="cell-sm-11 cell-md-9 cell-md-push-1">
+        <div class="range range-xs-justify">
+            <div class="cell-sm-6 cell-sm-3 text-sm-left">
+            <div class="reveal-inline-block inset-sm-left-20 inset-md-left-0">
+                <div class="pull-left inset-right-10">
+                <p class="text-extra-small text-uppercase text-gray-base">Sort By:</p>
+                </div>
+                <div class="pull-right shadow-drop-xs reveal-inline-block select-xs">
+                <select data-minimum-results-for-search="Infinity" data-constraints="@Required" class="form-control select-filter">
+                    <option value="2">{% trans "Popularity" %}</option>
+                    <option value="3">{% trans "Newest" %}</option>
+                </select>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-sm-3 offset-top-20 offset-sm-top-0 text-sm-right">
+            <div class="reveal-inline-block inset-sm-right-20 inset-md-right-0">
+                <div class="pull-left inset-right-10">
+                <p class="text-extra-small text-uppercase text-gray-base">{% trans "View" %}:</p>
+                </div>
+                <div class="pull-right">
+                <ul class="list-inline list-primary-filled text-center">
+                    <li><a href="tours-list.html" class="shadow-drop-lg"><span class="icon icon-sm icon-square bg-white mdi mdi-format-list-bulleted text-silver"></span></a></li>
+                    <li><a href="tours-grid.html" class="shadow-drop-lg"><span class="icon icon-sm icon-square bg-primary mdi mdi-view-module text-white"></span></a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="range range-xs-center range-sm-left range-md-center offset-top-50 offset-md-top-25">
+            <div class="cell-sm-6 cell-md-4">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Turkey</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$2,000</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Istanbul, Antalya, Ephesus</li>
+                    <li>8 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30 offset-sm-top-0">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Spain</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$3,000</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Madrid, Andalucia, Barcelona</li>
+                    <li>9 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30 offset-md-top-0">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">United Kingdom</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$5,000</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>England, Scotland, Wales</li>
+                    <li>13 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html">
+                    <img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a>
+                </div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Eastern Europe</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$2,500</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Slovenia, Hungary, Poland</li>
+                    <li>10 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html">
+                    <img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Italy</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$2,700</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Rome, Milan, Venice</li>
+                    <li>7 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Swiss Alps</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$5,100</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Zurich, Geneve, Luzern</li>
+                    <li>13 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">India</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$2,1500</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Delhi, Goa, Shimla</li>
+                    <li>6 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Southern USA</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$5,200</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Florida, Texas, California</li>
+                    <li>9 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Czech Republic</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$3,200</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Prague , Cesky Krumlov</li>
+                    <li>7 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Northern Europe</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$2,600</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Denmark, Sweden, Norway</li>
+                    <li>8 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Cyprus & Malta</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$3,100</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Larnaca, Mdina, Valletta</li>
+                    <li>5 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="cell-sm-6 cell-md-4 offset-top-30">
+            <div class="box-offer box-offer-xs">
+                <div class="box-offer-img-wrap"><a href="tours-single.html"><img src="{% static 'images/270x240.jpg' %}" width="270" height="240" alt="" class="img-responsive center-block"></a></div>
+                <div class="box-offer-caption text-left">
+                <div class="pull-left">
+                    <div class="box-offer-title text-ubold"><a href="tours-single.html" class="text-gray-base">Germany</a></div>
+                </div>
+                <div class="pull-right">
+                    <div class="box-offer-price text-gray-base">$4,400</div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="offset-top-8 offset-xs-top-4">
+                    <ul class="list-inline list-inline-13 list-inline-marked list-inline-marked-offset-inverse-top text-silver-chalice text-extra-small">
+                    <li>Berlin, Cologne, Hamburg</li>
+                    <li>10 days</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="offset-top-50">
+            <nav>
+            <ul class="pagination-classic">
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">12</a></li>
+            </ul>
+            </nav>
+        </div>
+        </div>
+        <div class="cell-sm-10 cell-md-3 offset-top-50 offset-md-top-0 text-md-left">
+        <aside class="blog-aside box box-xs reveal-block bg-white">
+            <p class="text-gray-base text-ubold text-uppercase text-spacing-200">Search</p>
+            <div class="offset-top-20">
+            <form class="rd-mailform">
+                <div class="form-blog-search">
+                <button class="form-search-submit"><span><img src="{% static 'images/icon-34-16x21.png' %}" width="16" height="21" alt="" class="img-responsive center-block"></span></button>
+                <div class="form-group form-group-xs">
+                    <label for="tours-destination" class="form-label form-search-label form-label-sm">Your Destination</label>
+                    <input id="tours-destination" type="text" class="form-search-input input-sm form-control">
+                </div>
+                </div>
+                <div class="form-blog-search">
+                <button class="form-search-submit"><span><img src="{% static 'images/icon-35-19x17.png' %}" width="19" height="17" alt="" class="img-responsive center-block"></span></button>
+                <div class="form-group form-group-xs">
+                    <label for="tours-arrival" class="form-label form-search-label form-label-sm">Arrival</label>
+                    <input id="tours-arrival" type="text" class="form-search-input input-sm form-control">
+                </div>
+                </div>
+                <div class="form-blog-search">
+                <button class="form-search-submit"><span><img src="{% static 'images/icon-36-19x17.png' %}" width="19" height="17" alt="" class="img-responsive center-block"></span></button>
+                <div class="form-group form-group-xs">
+                    <label for="tours-departure" class="form-label form-search-label form-label-sm">Departure</label>
+                    <input id="tours-departure" type="text" class="form-search-input input-sm form-control">
+                </div>
+                </div>
+            </form>
+            </div>
+            <div class="offset-top-40">
+            <hr class="hr bg-gallery">
+            </div>
+            <div class="offset-top-35">
+            <p class="text-gray-base text-ubold text-uppercase text-spacing-200">PRICE RANGE</p>
+            <div class="offset-top-15">
+                <div data-min="800" data-max="5000" data-start="[800, 3200]" data-step="1" data-tooltip="true" data-min-diff="800" data-input=".rd-range-input-value-1" data-input-2=".rd-range-input-value-2" class="rd-range"></div>
+            </div>
+            </div>
+            <div class="offset-top-60">
+            <hr class="hr bg-gallery">
+            </div>
+            <div class="offset-top-30">
+            <p class="text-gray-base text-ubold text-uppercase text-spacing-200">Categories</p>
+            <div class="offset-top-15">
+                <ul class="list list-1 list-checkboxs text-left">
+                <li>
+                    <label class="checkbox-inline checkbox-inline-left">
+                    <input name="remember" value="checkbox-1" type="checkbox" class="checkbox-custom">
+                    <span class="text-small">Sea Tours (721)</span> </label>
+                </li>
+                <li>
+                    <label class="checkbox-inline checkbox-inline-left">
+                    <input name="remember" value="checkbox-1" type="checkbox" class="checkbox-custom">
+                    <span class="text-small">Romantic Tours (156)</span> </label>
+                </li>
+                <li>
+                    <label class="checkbox-inline checkbox-inline-left">
+                    <input name="remember" value="checkbox-1" type="checkbox" class="checkbox-custom">
+                    <span class="text-small">Honeymoon Tours (74)</span> </label>
+                </li>
+                <li>
+                    <label class="checkbox-inline checkbox-inline-left">
+                    <input name="remember" value="checkbox-1" type="checkbox" class="checkbox-custom">
+                    <span class="text-small">Country Tours (513)</span> </label>
+                </li>
+                <li>
+                    <label class="checkbox-inline checkbox-inline-left">
+                    <input name="remember" value="checkbox-1" type="checkbox" class="checkbox-custom">
+                    <span class="text-small">Mountain Tours</span> </label>
+                </li>
+                </ul>
+            </div>
+            <div class="offset-top-25"><a href="#" class="btn btn-primary btn-width-110">Search</a></div>
+            </div>
+        </aside>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock contents %}

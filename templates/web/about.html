@@ -1,0 +1,184 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block carrousel %}
+<section class="section-height-mac context-dark">
+    <div data-on="false" data-md-on="true" class="rd-parallax">
+        <div data-speed="0.25" data-type="media" data-url="{% static 'images/about/olas_1920x900x1.jpg' %}" class="rd-parallax-layer"></div>
+        <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
+        <div class="bg-overlay-darker">
+            <div class="shell section-34 section-md-100 section-lg-top-170 section-lg-bottom-165">
+            <h1 class="veil reveal-md-inline-block">{% trans "About Us" %}</h1>
+            <div class="offset-top-4">
+                <h6 class="text-italic">{% trans "Learn More About CubaVadis" %}</h6>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+{% endblock carrousel %}
+
+{% block contents %}
+<section class="section-80 section-md-top-125">
+    <div class="shell">
+    <div class="range range-xs-center range-lg-justify">
+        <div class="cell-sm-6 cell-sm-push-1 cell-lg-5 text-sm-left">
+        <h3>{% trans "Traveling. Tours. Adventure." %}</h3>
+        <div class="offset-top-15">
+            <p>{% blocktrans %}We are committed to offering travel services of the highest quality, combining our energy and enthusiasm, with our years of experience. Our greatest satisfaction comes in serving large numbers of satisfied clients who have experienced the joys and inspiration of travel.{% endblocktrans %}</p>
+        </div>
+        <div class="offset-top-20 offset-md-top-45"><a href="tours-grid.html" class="btn btn-primary">{% trans "view tours" %}</a></div>
+        </div>
+        <div class="cell-sm-5 cell-lg-preffix-1 offset-top-60 offset-sm-top-0 text-center">
+        <div class="range range-xs-bottom range-xs-left range-md-center">
+            <div class="cell-xs-5 cell-xs-preffix-1 cell-sm-preffix-0 cell-sm-6 cell-md-4">
+                <a href="#" class="reveal-inline-block">
+                    <img src="{% static 'images/place-01-118x89.jpg' %}" width="118" height="89" alt="" class="img-responsive img-semi-transparent-inverse center-block">
+                </a>
+            </div>
+            <div class="cell-xs-5 cell-sm-6 cell-md-4 offset-top-30 offset-xs-top-0">
+                <a href="#" class="reveal-inline-block">
+                    <img src="{% static 'images/place-02-79x89.jpg' %}" width="79" height="89" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+            <div class="cell-xs-5 cell-xs-preffix-1 cell-sm-preffix-0 cell-sm-6 cell-md-4 offset-top-30 offset-md-top-0"><a href="#" class="reveal-inline-block"><img src="{% static 'images/place-03-138x98.jpg' %}" width="138" height="98" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+            <div class="cell-xs-5 cell-sm-6 cell-md-4 offset-top-30"><a href="#" class="reveal-inline-block">
+                <img src="{% static 'images/place-04-144x93.jpg' %}" width="144" height="93" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+            <div class="cell-xs-5 cell-xs-preffix-1 cell-sm-preffix-0 cell-sm-6 cell-md-4 offset-top-30"><a href="#" class="reveal-inline-block"><img src="{% static 'images/place-05-138x96.jpg' %}" width="138" height="96" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+            <div class="cell-xs-5 cell-sm-6 cell-md-4 offset-top-30"><a href="#" class="reveal-inline-block">
+                <img src="{% static 'images/place-06-138x98.jpg' %}" width="138" height="98" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+            <div class="cell-xs-5 cell-xs-preffix-1 cell-sm-preffix-0 cell-sm-6 cell-md-4 offset-top-30"><a href="#" class="reveal-inline-block"><img src="{% static 'images/place-07-154x69.jpg' %}" width="154" height="69" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+            <div class="cell-xs-5 cell-sm-6 cell-md-4 offset-top-30"><a href="#" class="reveal-inline-block">
+                <img src="{% static 'images/place-08-139x74.jpg' %}" width="139" height="74" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+            <div class="cell-xs-5 cell-xs-preffix-1 cell-sm-preffix-0 cell-sm-6 cell-md-4 offset-top-30"><a href="#" class="reveal-inline-block"><img src="{% static 'images/place-09-132x84.jpg' %}" width="132" height="84" alt="" class="img-responsive img-semi-transparent-inverse center-block"></a></div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="section-80 section-md-top-70 bg-wild-wand bg-wild-wand-team-member">
+    <div class="shell">
+    <div>
+        <h3>{% trans "Our Team" %}</h3>
+    </div>
+    <div class="offset-top-10">
+        <p>{% trans "An experienced team of people passionate about traveling" %}</p>
+    </div>
+    <div class="offset-top-40">
+        <div data-items="1" data-sm-items="2" data-md-items="3" data-stage-padding="5" data-loop="false" data-margin="30" data-mouse-drag="false" data-dots="true" data-nav="true" class="owl-carousel owl-dots-primary">
+        <div class="owl-item">
+            <div class="team-member">
+            <div class="team-member-img-wrap team-member-img-wrap-border-darker"><img src="{% static 'images/100x100.jpg' %}" width="100" height="100" alt="" class="img-circle img-responsive center-block"></div>
+            <div class="team-member-body">
+                <div class="offset-top-20">
+                <div class="team-member-title text-small text-ubold text-uppercase text-spacing-200 text-gray-base">John Richardson</div>
+                </div>
+                <div class="offset-top-8">
+                <div class="team-member-description text-spacing-300 text-italic text-uppercase text-silver-chalice">FOUNDER & MANAGING DIRECTOR</div>
+                </div>
+                <div class="offset-top-20">
+                <p class="text-small text-italic text-silver-chalice">A successful business owner, social entrepreneur, and business strategist, John is one of the most important persons at SunTravel, who founded it years ago.</p>
+                </div>
+            </div>
+            <div class="team-member-hover-content offset-top-20 offset-lg-top-0">
+                <button type="button" data-toggle="modal" data-target="#teamMember" class="btn btn-primary">{% trans "View FULL INFO" %}</button>
+            </div>
+            </div>
+            <div class="offset-top-20">
+            <ul class="list-inline list-primary list-inline-13">
+                <li class="text-center"><a href="#" class="icon fa fa-facebook-f text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-twitter text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-youtube text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-linkedin text-gray"></a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="owl-item">
+            <div class="team-member">
+            <div class="team-member-img-wrap team-member-img-wrap-border-darker">
+                <img src="{% static 'images/100x100.jpg' %}" width="100" height="100" alt="" class="img-circle img-responsive center-block">
+            </div>
+            <div class="team-member-body">
+                <div class="offset-top-20">
+                <div class="team-member-title text-small text-ubold text-uppercase text-spacing-200 text-gray-base">Leslie Silva</div>
+                </div>
+                <div class="offset-top-8">
+                <div class="team-member-description text-spacing-300 text-italic text-uppercase text-silver-chalice">SENIOR TRAVEL AGENT</div>
+                </div>
+                <div class="offset-top-20">
+                <p class="text-small text-italic text-silver-chalice">Leslie started out in the travel industry straight from school, working for the National Union of Students Travel Service, and quickly learned all the aspects of business travel.</p>
+                </div>
+            </div>
+            <div class="team-member-hover-content offset-top-20 offset-lg-top-0">
+                <button type="button" data-toggle="modal" data-target="#teamMember" class="btn btn-primary">{% trans "View FULL INFO" %}</button>
+            </div>
+            </div>
+            <div class="offset-top-20">
+            <ul class="list-inline list-primary list-inline-13">
+                <li class="text-center"><a href="#" class="icon fa fa-facebook-f text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-twitter text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-youtube text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-linkedin text-gray"></a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="owl-item">
+            <div class="team-member">
+            <div class="team-member-img-wrap team-member-img-wrap-border-darker"><img src="{% static 'images/100x100.jpg' %}" width="100" height="100" alt="" class="img-circle img-responsive center-block"></div>
+            <div class="team-member-body">
+                <div class="offset-top-20">
+                <div class="team-member-title text-small text-ubold text-uppercase text-spacing-200 text-gray-base">Kent Fleming</div>
+                </div>
+                <div class="offset-top-8">
+                <div class="team-member-description text-spacing-300 text-italic text-uppercase text-silver-chalice">HOTEL AGENT</div>
+                </div>
+                <div class="offset-top-20">
+                <p class="text-small text-italic text-silver-chalice">Kent started with SunTravel in May 2013, when he decided to change something in his life by entering the tour and hotel booking industry.</p>
+                </div>
+            </div>
+            <div class="team-member-hover-content offset-top-20 offset-lg-top-0">
+                <button type="button" data-toggle="modal" data-target="#teamMember" class="btn btn-primary">{% trans "View FULL INFO" %}</button>
+            </div>
+            </div>
+            <div class="offset-top-20">
+            <ul class="list-inline list-primary list-inline-13">
+                <li class="text-center"><a href="#" class="icon fa fa-facebook-f text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-twitter text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-youtube text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-linkedin text-gray"></a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="owl-item">
+            <div class="team-member">
+            <div class="team-member-img-wrap team-member-img-wrap-border-darker"><img src="{% static 'images/100x100.jpg' %}" width="100" height="100" alt="" class="img-circle img-responsive center-block"></div>
+            <div class="team-member-body">
+                <div class="offset-top-20">
+                <div class="team-member-title text-small text-ubold text-uppercase text-spacing-200 text-gray-base">John Richardson</div>
+                </div>
+                <div class="offset-top-8">
+                <div class="team-member-description text-spacing-300 text-italic text-uppercase text-silver-chalice">FOUNDER & MANAGING DIRECTOR</div>
+                </div>
+                <div class="offset-top-20">
+                <p class="text-small text-italic text-silver-chalice">A successful business owner, social entrepreneur, and business strategist, John is one of the most important persons at SunTravel, who founded it years ago.</p>
+                </div>
+            </div>
+            <div class="team-member-hover-content offset-top-20 offset-lg-top-0">
+                <button type="button" data-toggle="modal" data-target="#teamMember" class="btn btn-primary">{% trans "View FULL INFO" %}</button>
+            </div>
+            </div>
+            <div class="offset-top-20">
+            <ul class="list-inline list-primary list-inline-13">
+                <li class="text-center"><a href="#" class="icon fa fa-facebook-f text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-twitter text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-youtube text-gray"></a></li>
+                <li class="text-center"><a href="#" class="icon fa fa-linkedin text-gray"></a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="offset-top-20 offset-md-top-45"><a href="our-team.html" class="btn btn-primary">{% trans "View More" %}</a></div>
+    </div>
+</section>
+{% endblock contents %}

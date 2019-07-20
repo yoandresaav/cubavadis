@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-20 16:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cvadis/settings.py:122
+msgid "Spanish"
+msgstr "Español"
+
+#: cvadis/settings.py:123
+msgid "English"
+msgstr "Inglés"
+
+#: templates/_base.html:32
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/_base.html:33
+#, fuzzy
+#| msgid "tours/"
+msgid "Tours"
+msgstr "viajes/"
+
+#: templates/_base.html:41
+msgid "About"
+msgstr "Nosotros"
+
+#: templates/_base.html:49
+msgid "Pages"
+msgstr "Páginas"
+
+#: templates/_base.html:87
+msgid "Gallery"
+msgstr "Fotos"
+
+#: templates/_base.html:95
+msgid "Blog"
+msgstr "Noticias"
+
+#: templates/_base.html:96
+msgid "Contacts"
+msgstr "Contáctanos"
+
+#: templates/_base.html:178
+#, fuzzy
+#| msgid "Contacts"
+msgid "Our Contacts"
+msgstr "Contáctanos"
+
+#: templates/_base.html:219
+msgid "All Rights Reserved"
+msgstr "Todos los Derechos Reservados"
+
+#: templates/_base.html:224
+msgid "Privacy Policy"
+msgstr "Política de Privacidad"
+
+#: templates/_base.html:227
+msgid "Terms of Use"
+msgstr "Términos de Uso"
+
+#: templates/_base.html:230
+#, fuzzy
+#| msgid "Contacts"
+msgid "Contact Support"
+msgstr "Contáctanos"
+
+#: templates/web/about.html:12
+#, fuzzy
+#| msgid "About"
+msgid "About Us"
+msgstr "Nosotros"
+
+#: templates/web/about.html:14
+msgid "Learn More About CubaVadis"
+msgstr "Aprenda más sobre CubaVadis"
+
+#: templates/web/about.html:28
+msgid "Traveling. Tours. Adventure."
+msgstr "Viajes. Excursiones. Aventuras."
+
+#: templates/web/about.html:30
+msgid ""
+"We are committed to offering travel services of the highest quality, "
+"combining our energy and enthusiasm, with our years of experience. Our "
+"greatest satisfaction comes in serving large numbers of satisfied clients "
+"who have experienced the joys and inspiration of travel."
+msgstr ""
+"Estamos comprometidos a ofrecer servicios de viaje de la más alta calidad, "
+"combinando nuestra energía y entusiasmo con nuestros años de experiencia. "
+"Nuestra mayor satisfacción es servir a un gran número de clientes "
+"satisfechos que han experimentado las alegrías y la inspiración de los "
+"viajes."
+
+#: templates/web/about.html:32
+#, fuzzy
+#| msgid "View More"
+msgid "view tours"
+msgstr "Ver Tours"
+
+#: templates/web/about.html:62
+msgid "Our Team"
+msgstr "Nuestro Equipo"
+
+#: templates/web/about.html:65
+msgid "An experienced team of people passionate about traveling"
+msgstr "Un experimentado equipo de personas apasionadas por los viajes."
+
+#: templates/web/about.html:84 templates/web/about.html:113
+#: templates/web/about.html:140 templates/web/about.html:167
+#: templates/web/index.html:57 templates/web/index.html:73
+#: templates/web/index.html:89 templates/web/index.html:105
+msgid "View FULL INFO"
+msgstr "Ver información completa"
+
+#: templates/web/about.html:181 templates/web/index.html:112
+msgid "View More"
+msgstr "Ver más"
+
+#: templates/web/contacts.html:12
+#, fuzzy
+#| msgid "Contacts"
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+#: templates/web/contacts.html:14
+msgid "Let`s keep in touch!"
+msgstr "¡Mantengámonos en contacto!"
+
+#: templates/web/contacts.html:30
+msgid "Contact Our Agency"
+msgstr "Póngase en contacto con nuestra agencia"
+
+#: templates/web/contacts.html:32
+msgid ""
+"You can contact us any way that is convenient for you. We are available 24/7 "
+"via fax, email or telephone. You can also use a quick contact form on the "
+"right or visit our office personally. Email us with any questions or "
+"inquiries or use our contact data. We would be happy to answer your "
+"questions."
+msgstr ""
+"Puede contactarnos de cualquier manera que sea conveniente para usted. "
+"Estamos disponibles 24/7 a través de fax, correo electrónico o teléfono. "
+"También puede usar un formulario de contacto rápido a la derecha o visitar "
+"nuestra oficina personalmente. Envíenos un correo electrónico con cualquier "
+"pregunta o consulta o utilice nuestros datos de contacto. Estaremos "
+"encantados de responder a sus preguntas."
+
+#: templates/web/index.html:17
+msgid "To travel is to Live"
+msgstr "Viajar es Vivir"
+
+#: templates/web/index.html:20
+msgid ""
+"Best Tours & Travel specializes in making your trip an absolute success."
+msgstr "CubaVadis se especializa en hacer de su viaje un éxito absoluto."
+
+#: templates/web/index.html:37
+msgid "What Our Clients Say"
+msgstr "Qué dicen nuestros clientes"
+
+#: templates/web/index.html:40
+msgid ""
+"Our clients' testimonials are the best proof of our high level of service"
+msgstr ""
+"Los testimonios de nuestros clientes son la mejor prueba de nuestro alto "
+"nivel de servicio"
+
+#: templates/web/index.html:122
+msgid "Why us?"
+msgstr "¿Porque nosotros?"
+
+#: templates/web/index.html:132
+msgid "The Best Service"
+msgstr "El mejor servicio"
+
+#: templates/web/index.html:136
+msgid "Our aim is to provide you with the tour service of the top quality"
+msgstr ""
+"Nuestro objetivo es brindarle el servicio de tours de la mejor calidad."
+
+#: templates/web/index.html:153
+msgid "Everything is Included"
+msgstr "Todo esta incluido"
+
+#: templates/web/index.html:157
+msgid ""
+"There are dozens of aspects to pay attention to, while organizing a trip"
+msgstr ""
+"Hay docenas de aspectos a los que se debe prestar atención al organizar un "
+"viaje."
+
+#: templates/web/index.html:173
+msgid "Great Prices"
+msgstr "Precios grandiosos"
+
+#: templates/web/index.html:177
+msgid "All our tours and excursions are available at really affordable prices"
+msgstr ""
+"Todos nuestros tours y excursiones están disponibles a precios realmente "
+"accesibles."
+
+#: templates/web/index.html:197
+msgid "Our travel agents are always there to support you during your trip."
+msgstr ""
+"Nuestros agentes de viajes siempre están ahí para ayudarlo durante su viaje."
+
+#: templates/web/index.html:212
+msgid "Handpicked Hotels"
+msgstr "Hoteles Seleccionados"
+
+#: templates/web/index.html:215
+msgid "We pick the hotels with the utmost reputation and positive reviews"
+msgstr "Escogemos los hoteles con mayor reputación y críticas positivas."
+
+#: templates/web/index.html:230
+msgid "highly qualified service"
+msgstr "servicio altamente calificado"
+
+#: templates/web/index.html:233
+msgid ""
+"Our high level of service is officially recognized by thousands of clients"
+msgstr ""
+"Nuestro alto nivel de servicio está oficialmente reconocido por miles de "
+"clientes."
+
+#: templates/web/index.html:248
+#, fuzzy
+#| msgid "tours/"
+msgid "Hot Tours"
+msgstr "viajes/"
+
+#: templates/web/index.html:251
+msgid "Check out our top-rated tours"
+msgstr ""
+
+#: templates/web/index.html:365
+msgid "Happy Clients"
+msgstr "Clientes Felices"
+
+#: templates/web/index.html:378
+msgid "Amazing Tours"
+msgstr "Tours Increíbles"
+
+#: templates/web/index.html:413
+msgid "Questions Answered"
+msgstr "Preguntas Respondidas"
+
+#: templates/web/index.html:430
+msgid "Find your flight"
+msgstr "Encuentra tu vuelo"
+
+#: templates/web/tours.html:12
+msgid "All Tours For You"
+msgstr "Todos los Tours para ti"
+
+#: templates/web/tours.html:14
+msgid "tours found"
+msgstr "tours encontrados"
+
+#: templates/web/tours.html:36
+msgid "Popularity"
+msgstr "Popularidad"
+
+#: templates/web/tours.html:37
+msgid "Newest"
+msgstr "Lo más nuevo"
+
+#: templates/web/tours.html:46
+#, fuzzy
+#| msgid "View More"
+msgid "View"
+msgstr "Ver más"
+
+#: web/urls.py:13
+msgid "tours/"
+msgstr "viajes/"

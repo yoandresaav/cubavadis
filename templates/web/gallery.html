@@ -1,0 +1,107 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block carrousel %}
+<section class="section-height-mac context-dark">
+    <div data-on="false" data-md-on="true" class="rd-parallax">
+        <div data-speed="0.25" data-type="media" data-url="{% static 'images/1920x900.jpg' %}" class="rd-parallax-layer"></div>
+        <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
+        <div class="bg-overlay-darker">
+            <div class="shell section-34 section-md-100 section-lg-top-170 section-lg-bottom-165">
+            <h1 class="veil reveal-md-inline-block">Gallery</h1>
+            <div class="offset-top-4">
+                <h6 class="text-italic">Photos of Our Destinations</h6>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+{% endblock carrousel %}
+
+{% block contents %}
+    <section>
+        <div data-photo-swipe-gallery="gallery" class="range range-condensed range-xs-center range-sm-left">
+            <div class="cell-xs-6 cell-md-4 cell-lg-3">
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="Swiss Alps, Switzerland" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">Swiss Alps, Switzerland</span>
+                        </span>
+                    </span>
+                </a>
+            </div>
+            <div class="cell-xs-6 cell-md-4 cell-lg-3 offset-top-0">
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="Longs Peak, the USA" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">Longs Peak, the USA</span>
+                        </span>
+                    </span>
+                </a> 
+            </div>
+            <div class="cell-xs-6 cell-md-4 cell-lg-3 offset-top-0"> 
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="Himalayas, Nepal" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">Himalayas, Nepal</span>
+                        </span>
+                    </span>
+                </a> 
+            </div>
+            <div class="cell-xs-6 cell-md-4 cell-lg-3 offset-top-0"> 
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="Istanbul, Turkey" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">Istanbul, Turkey</span>
+                        </span>
+                    </span>
+                </a> 
+            </div>
+            <div class="cell-xs-6 cell-md-4 cell-lg-3 offset-top-0"> 
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="London, Great Britain" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">London, Great Britain</span>
+                        </span>
+                    </span>
+                </a> 
+            </div>
+            <div class="cell-xs-6 cell-md-4 cell-lg-3 offset-top-0"> 
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="Bled, Slovenia" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">Bled, Slovenia</span>
+                        </span>
+                    </span>
+                </a> 
+            </div>
+            <div class="cell-xs-6 cell-md-4 cell-lg-3 offset-top-0"> 
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="Port Antonio, Jamaica" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">Port Antonio, Jamaica</span>
+                        </span>
+                    </span>
+                </a> 
+            </div>
+            <div class="cell-xs-6 cell-md-4 cell-lg-3 offset-top-0"> 
+                <a data-photo-swipe-item="" data-size="1170x780" href="{% static 'images/1170x780.jpg' %}" data-author="Burgenland, Austria" class="thumbnail-classic thumbnail-classic-fullwidth">
+                    <span class="figure">
+                        <img width="370" height="240" src="{% static 'images/478x400.jpg' %}" alt="">
+                        <span class="figcaption text-left">
+                            <span class="text-ubold text-white">Burgenland, Austria</span>
+                        </span>
+                    </span>
+                </a> 
+            </div>
+        </div>
+    </section>
+{% endblock contents %}
