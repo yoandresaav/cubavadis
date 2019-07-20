@@ -1,0 +1,95 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block carrousel %}
+<section class="section-height-mac context-dark">
+    <div data-on="false" data-md-on="true" class="rd-parallax">
+        <div data-speed="0.25" data-type="media" data-url="{% static 'images/1920x900.jpg' %}" class="rd-parallax-layer"></div>
+        <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
+        <div class="bg-overlay-darker">
+            <div class="shell section-34 section-md-100 section-lg-top-170 section-lg-bottom-165">
+            <h1 class="veil reveal-md-inline-block">{% trans "Contact Us" %}</h1>
+            <div class="offset-top-4">
+                <h6 class="text-italic">{% trans "Let`s keep in touch!" %}</h6>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+{% endblock carrousel %}
+
+{% block contents %}
+<section class="section-80 bg-wild-wand">
+    <div class="shell">
+    <div class="box box-insets-off bg-white reveal-lg-block">
+        <div class="range range-xs-center range-md-justify text-sm-left">
+        <div class="cell-sm-8 cell-sm-push-1">
+            <div class="box-inner">
+            <h5 class="text-ubold">{% trans "Contact Our Agency" %}</h5>
+            <div class="offset-top-25">
+                <p class="text-small text-left">{% blocktrans %}You can contact us any way that is convenient for you. We are available 24/7 via fax, email or telephone. You can also use a quick contact form on the right or visit our office personally. Email us with any questions or inquiries or use our contact data. We would be happy to answer your questions.{% endblocktrans %}</p>
+            </div>
+            <div class="range range-xs-center offset-top-40">
+                <div class="cell-sm-6">
+                <h5 class="text-ubold">Our Contacts</h5>
+                <div class="offset-top-25">
+                    <address class="contact-info text-left">
+                    <p class="reveal-block text-small"><a href="#" class="text-gray"><span class="unit unit-horizontal unit-spacing-xs"><span class="unit-left">
+                        <img src="{% static 'images/icon-01-16x21.png' %}" width="16" height="21" alt="" class="img-responsive center-block offset-top-4"></span><span class="unit-body"><span>735/21 third Street, New York, York Street, USA</span></span></span></a></p>
+                    <div class="offset-top-20">
+                    <p class="reveal-inline-block text-small"><a href="callto:#" class="text-gray"><span class="unit unit-middle unit-horizontal unit-spacing-xs"><span class="unit-left">
+                        <img src="{% static 'images/icon-02-19x19.png' %}" width="19" height="19" alt="" class="img-responsive center-block"></span><span class="unit-body"><span>19009197</span></span></span></a></p>
+                    </div>
+                    <div class="offset-top-20">
+                    <p class="reveal-inline-block text-small"><a href="callto:#" class="text-gray"><span class="unit unit-middle unit-horizontal unit-spacing-xs"><span class="unit-left">
+                        <img src="{% static 'images/icon-03-12x20.png' %}" width="12" height="20" alt="" class="img-responsive center-block"></span><span class="unit-body"><span>19009197</span></span></span></a></p>
+                    </div>
+                    <div class="offset-top-20">
+                    <p class="reveal-inline-block text-small"><a href="/cdn-cgi/l/email-protection#e9ca" class="text-gray"><span class="unit unit-middle unit-horizontal unit-spacing-xs"><span class="unit-left">
+                        <img src="{% static 'images/icon-04-20x13.png' %}" width="20" height="13" alt="" class="img-responsive center-block"></span><span class="unit-body"><span><span class="__cf_email__" data-cfemail="10797e767f5074757d7f7c797e7b3e7f6277">philip@gmail.com</span></span></span></span></a></p>
+                    </div>
+                    <div class="offset-top-20">
+                    <p class="reveal-inline-block text-small"><a href="#" class="text-gray"><span class="unit unit-middle unit-horizontal unit-spacing-xs"><span class="unit-left">
+                        <img src="{% static 'images/icon-05-19x19.png' %}" width="19" height="19" alt="" class="img-responsive center-block"></span><span class="unit-body"><span>philip.org</span></span></span></a></p>
+                    </div>
+                    </address>
+                </div>
+                </div>
+                <div class="cell-sm-6">
+                <h5 class="text-ubold">Any Questions?</h5>
+                <div class="offset-top-25">
+                    <form data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" class="rd-mailform text-left">
+                    <div class="form-group form-group-xs">
+                        <label for="questions-contact-name" class="form-label">Your Name</label>
+                        <input id="questions-contact-name" type="text" name="name" data-constraints="@Required" class="form-control text-regular">
+                    </div>
+                    <div class="form-group form-group-xs">
+                        <label for="questions-contact-email" class="form-label">Email</label>
+                        <input id="questions-contact-email" type="email" name="email" data-constraints="@Email @Required" class="form-control text-regular">
+                    </div>
+                    <div class="form-group form-group-xs">
+                        <label for="questions-contact-message" class="form-label">Message</label>
+                        <textarea id="questions-contact-message" name="message" data-constraints="@Required" style="height:120px;" class="form-control text-regular"></textarea>
+                    </div>
+                    <div class="offset-top-20 text-center text-sm-left">
+                        <button type="submit" class="btn btn-width-110 btn-primary">SEND MESSAGE</button>
+                    </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="cell-sm-4 section-map-fullheight inset-lg-right-20">
+            <div class="rd-google-map">
+                <div class="overlay rd-google-map__model" onClick="style.pointerEvents='none'"></div>	
+                <iframe  class="rd-google-map__model" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.8404068987!2d-74.2581973675357!3d40.70583158554698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2zVGjDoG5oIHBo4buRIE5ldyBZb3JrLCBUaeG7g3UgYmFuZyBOZXcgWW9yaw!5e0!3m2!1svi!2s!4v1480613299202" style="border:0;scrollwheel: false;width:100%" allowfullscreen></iframe>         
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock contents %}
