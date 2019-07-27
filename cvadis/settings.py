@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'cvadis.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('DATABASES_DB'),
         'USER': os.environ.get('DATABASES_USER'),
         'PASSWORD': os.environ.get('DATABASES_PASSWORD'),
