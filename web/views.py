@@ -6,6 +6,10 @@ class HomeView(TemplateView):
     template_name = 'web/index.html'
 
 
+class SearchFlights(TemplateView):
+    template_name = 'web/search-flights.html'
+
+
 class ToursView(TemplateView):
     template_name = 'web/tours.html'
 
