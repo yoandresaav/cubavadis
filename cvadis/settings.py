@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # user apps
     'web',
+    'flights',
 ]
 
 MIDDLEWARE = [
@@ -142,5 +143,12 @@ if DEBUG:
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
+    INSTALLED_APPS.append(
+        'debug_toolbar',
+    )
+    MIDDLEWARE.append(
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    )
+    INTERNAL_IPS = ('127.0.0.1',)
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
