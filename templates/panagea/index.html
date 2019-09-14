@@ -26,7 +26,7 @@
 									<input class="form-control" 
 											id="autocomplete-destino"
 											name="autocomplete-destino"
-											type="text" placeholder="Ciudad de destino">
+											type="text" placeholder="Ciudad de destino...">
 									<i class="icon_pin_alt"></i>
 								</div>
 							</div>
@@ -46,11 +46,17 @@
 										<!-- Quantity Buttons -->
 										<div class="qtyButtons">
 											<label>Adultos</label>
-											<input type="text" name="qtyInput" value="1">
+											<input type="text" 
+													name="qtyInput" 
+													id="fecha-inicio"
+													value="1">
 										</div>
 										<div class="qtyButtons">
 											<label>Niños</label>
-											<input type="text" name="qtyInput" value="0">
+											<input type="text" 
+													name="qtyInput" 
+													id="fecha-regreso"
+													value="0">
 										</div>
 									</div>
 								</div>
@@ -479,9 +485,22 @@
 				}
 			}
 		});
-		/*
+		
 		$('#form-reservacion').on('submit', function(e){
 			e.preventDefault();
+			if ($('#autocomplete-origen').val() === ""){
+				toastr.error("Escoge una ciudad de origen en España!")
+				$('#autocomplete-origen').focus()
+				return false;
+			} 
+			if ($('#autocomplete-destino').val() === ""){
+				toastr.error("Escoge una ciudad de destino en Cuba!")
+				$('#autocomplete-destino').focus()
+				return false;
+			} 
+			$(this).submit();
+
+			return false;
 			$.post("{% url 'web:send_form_vuelos' %}", $(this).serialize())
 				.success(function(r){
 					console.log(r)
@@ -490,7 +509,7 @@
 					console.error(e);
 				})
 		})
-		*/
+		
 		$('form input').keydown(function (e) {
 			if (e.keyCode == 13) {
 				var inputs = $(this).parents("form").eq(0).find(":input");
