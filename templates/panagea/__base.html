@@ -23,6 +23,9 @@
     <link href="{% static 'panagea/css/style.css' %}" rel="stylesheet">
 	<link href="{% static 'panagea/css/vendors.css' %}" rel="stylesheet">
 
+	<!-- PLUGINS -->
+	<link href="{% static 'plugins/toastr/toastr.min.css' %}" rel="stylesheet">
+	
     <!-- YOUR CUSTOM CSS -->
 	<link href="{% static 'panagea/css/custom.css' %}" rel="stylesheet">
 	<style>
@@ -30,6 +33,7 @@
 			background-color: #fc5b62;
 		}
 	</style>
+	{% block styles %}{% endblock %}
 </head>
 
 <body>
@@ -284,6 +288,10 @@
 	<!-- INPUT QUANTITY  -->
 	<script src="{% static 'panagea/js/input_qty.js' %}"></script>
 	<script src="{% static 'js/bootstrap-autocomplete.min.js' %}"></script>
+	
+	<!-- INPUT PLUGINS  -->
+	<script src="{% static 'plugins/toastr/toastr.min.js' %}"></script>
+
 	{% block scripts %}{% endblock scripts %}
 </body>
 </html>

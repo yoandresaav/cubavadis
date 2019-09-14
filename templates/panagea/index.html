@@ -424,12 +424,23 @@
 	  'use strict';
 	  $('input[name="dates"]').daterangepicker({
 		  autoUpdateInput: false,
+		  minYear: 2019,
+		  maxYear: 2020,
 		  locale: {
-			  cancelLabel: 'Clear'
+			  cancelLabel: 'Cancelar',
+			  applyLabel: 'Agregar'
 		  }
 	  });
 	  $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
 		  $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
+		  console.error(picker.startDate.format('MM-DD-YY'))
+		  if (picker.startDate > moment().startOf('day')){
+			  console.log('Escoge un dia despues')
+			} else {
+			  console.log('Escoge un dia anterior')
+			  toastr.error("No puedes escoger un día anterior a hoy.")
+			  $(this).val('');
+		  }
 	  });
 	  $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
 		  $(this).val('');

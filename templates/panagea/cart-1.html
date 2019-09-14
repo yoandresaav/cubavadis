@@ -2,6 +2,23 @@
 {% load static %}
 
 
+{% block styles %}
+	<style>
+		.thumb_cart {
+			border-radius: 4%;
+			overflow: inherit;
+			display: inline-block;
+		}
+		.thumb_cart > img {
+			width: 120px;
+		}
+		.item_cart {
+			margin-left: 80px;
+		}
+	</style>
+{% endblock styles %}
+	
+
 {% block main %}
 	<main>
 		<div class="hero_in cart_section">
@@ -9,7 +26,7 @@
 				<div class="container">
 					<div class="bs-wizard clearfix">
 						<div class="bs-wizard-step active">
-							<div class="text-center bs-wizard-stepnum">Your cart</div>
+							<div class="text-center bs-wizard-stepnum">Busca el Vuelo</div>
 							<div class="progress">
 								<div class="progress-bar"></div>
 							</div>
@@ -17,7 +34,7 @@
 						</div>
 
 						<div class="bs-wizard-step disabled">
-							<div class="text-center bs-wizard-stepnum">Payment</div>
+							<div class="text-center bs-wizard-stepnum">Comprar</div>
 							<div class="progress">
 								<div class="progress-bar"></div>
 							</div>
@@ -25,7 +42,7 @@
 						</div>
 
 						<div class="bs-wizard-step disabled">
-							<div class="text-center bs-wizard-stepnum">Finish!</div>
+							<div class="text-center bs-wizard-stepnum">Disfrutar!</div>
 							<div class="progress">
 								<div class="progress-bar"></div>
 							</div>
@@ -74,7 +91,7 @@
 									</td>
 									<td class="options" style="width:5%; text-align:center;">
 										<a href="{{itinerario.url}}" target="_blank" rel="noopener">
-											<i class="icon-thumbs-up-1" style="font-size: 2rem;" ></i></a>
+											<i class="icon-link-ext-alt" style="font-size: 2rem;" ></i></a>
 									</td>
 								</tr>
 								{% endfor %}
