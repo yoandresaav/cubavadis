@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 
-from .models import Continent, Country, Municipality, TipoAirport, Airport
+from .models import (
+    Continent, Country, Municipality, TipoAirport, Airport,
+    SkyMarkets, SkyCurrency
+)
 
 
 @admin.register(Continent)
@@ -49,3 +52,15 @@ class AirportAdmin(admin.ModelAdmin):
     list_filter = ('tipo', 'scheduled_service')
     search_fields = ('name', 'slug')
     prepopulated_fields = {'slug': ['name']}
+
+
+@admin.register(SkyMarkets)
+class SkyMarketsAdmin(admin.ModelAdmin):
+    list_display = ('code', 'name')
+    search_fields = ('name',)
+
+
+@admin.register(SkyCurrency)
+class SkyCurrencyAdmin(admin.ModelAdmin):
+    list_display = ('code', 'symbol')
+    search_fields = ('code',)

@@ -5,7 +5,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.conf import settings
 from django.db import transaction
 
-from ...utils import create_airport
+from ...utils import create_airport, load_sky_markets, load_curriencies, load_places
 
 AIRPORT_CSV = 'airports.csv'
 DIR_BULKDATA = 'bulkdata'
@@ -20,9 +20,12 @@ class Command(BaseCommand):
     @transaction.atomic
     def handle(self, *args, **options):
         self.stdout.write(self.style.SUCCESS('Loading airport'))
+        load_curriencies()
+        """
         with open(FINAL_PATH, 'r') as csv_file:
             reader = csv.reader(csv_file)
             next(reader)  # skip header
             for row in reader:
                 create_airport(row)
+        """
         self.stdout.write(self.style.SUCCESS('Successfully closed poll'))

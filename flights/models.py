@@ -81,3 +81,36 @@ def check_if_slug_exist(obj):
             break
         name = get_random_string(8)
         local_code = get_random_string(8)
+
+
+# Sky Scanner API
+class SkyMarkets(models.Model):
+    code = models.CharField('Code', max_length=2)
+    name = models.CharField('Name', max_length=250)
+
+    def __str__(self):
+        return self.name
+
+
+class SkyCurrency(models.Model):
+    code = models.CharField('Code', max_length=3)
+    symbol = models.CharField('Symbol', max_length=10)
+    thousands_separator = models.CharField('ThousandsSeparator', max_length=5)
+    symbol_on_left = models.BooleanField('SymbolOnLeft')
+    space_setween_amount_and_symbol = models.BooleanField('SpaceBetweenAmountAndSymbol')
+    rounding_coefficient = models.PositiveIntegerField('RoundingCoefficient')
+    decimal_digits = models.PositiveIntegerField('DecimalDigits')
+
+    def __str__(self):
+        return self.code
+
+
+class Places(models.Model):
+    place_id = models.CharField('PlaceId', max_length=8)
+    place_name = models.CharField('PlaceName', max_length=120)
+    city_id = models.CharField('CityId', max_length=20)
+    country_id = models.CharField('CountryId', max_length=60)
+    country_name = models.CharField('CountryName', max_length=120)
+
+    def __str__(self):
+        return self.place_name

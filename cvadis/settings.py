@@ -32,6 +32,8 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
 # Application definition
 
 INSTALLED_APPS = [
+    'dal',
+    'dal_select2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
 
     # utilities
     'django_extensions',
+    'crispy_forms',
 
     # user apps
     'web',
@@ -152,3 +155,6 @@ if DEBUG:
     INTERNAL_IPS = ('127.0.0.1',)
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

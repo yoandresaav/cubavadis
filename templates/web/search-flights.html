@@ -2,6 +2,11 @@
 {% load i18n %}
 {% load static %}
 
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'css/datepicker.min.css' %}?">
+{% endblock styles %}
+
 {% block carrousel %}
 <section class="section-height-mac context-dark">
     <div data-on="false" data-md-on="true" class="rd-parallax">
@@ -14,12 +19,33 @@
               <h6 class="text-italic">Here are the most relevant search results according to your request</h6>
             </div>
             <div class="range range-xs-center offset-top-30">
-              <div class="cell-sm-8 cell-lg-6">
-                <form action="search-results.html" method="GET" class="form-search-results form-search rd-search">
-                  <button type="submit" class="form-search-submit"><span class="fa fa-search"></span></button>
+              <div class="cell-sm-12 cell-lg-10">
+                <form method="GET" class="form-search-results form-search rd-search">
+                    {% csrf_token %}
+                  <button type="submit" class="form-search-submit"><span class="fa fa-search"></span>Buscar</button>
                   <div class="form-group form-group-xs">
-                    <label for="search-results-form-search-widget" class="form-label form-search-label form-label-sm">{% trans 'Haga su búsqueda' %}</label>
-                    <input id="search-results-form-search-widget" type="text" name="s" autocomplete="off" class="form-search-input input-sm form-control input-sm">
+                    <input id="search-results-form-search-widget-1" type="text" name="s" 
+                        autocomplete="off" 
+                        data-provide="typeahead"
+                        placeholder="Origen"
+                        class="form-search-input form-control input-sm typeahead">
+                    <input id="search-results-form-search-widget-1" type="text" name="s" 
+                          autocomplete="off" 
+                          placeholder="Destino"
+                          class="form-search-input form-control input-sm">
+                    <input id="search-date-start" type="text" name="s" 
+                          autocomplete="off" 
+                          data-toggle="datepicker"
+                          placeholder="Fecha Inicio"
+                          class="form-search-input form-control input-sm">
+                    <input id="search-date-end" type="text" name="s" 
+                          autocomplete="off" 
+                          data-toggle="datepicker"
+                          placeholder="Fecha Final"
+                          class="form-search-input form-control input-sm">
+                    <input id="search-date-end" type="text" name="s" 
+                          autocomplete="off" 
+                          class="form-search-input form-control input-sm">
                   </div>
                 </form>
               </div>
@@ -98,64 +124,9 @@
               <p class="match"><em>Terms matched: 11 - URL: blog-grid.html</em></p>
             </li>
             <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="blog-masonry.html" class="search_link">Blog Masonry Grid</a></h5>
-              <p>...Latest News in <span class="search">Travel</span> and Tourism Sort By: Newest Eldest View: Dubai: The Las Vegas of the Middle East or Something Completely Different ? JU...</p>
-              <p class="match"><em>Terms matched: 11 - URL: blog-masonry.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="pricing.html" class="search_link">Pricing</a></h5>
-              <p>... plan for your <span class="search">travel</span>ing needs Our Pricing A variety of features available in 4 plans TOP RATED ECONOMY /mo provides up to 3 leading <span class="search">travel</span>...</p>
-              <p class="match"><em>Terms matched: 10 - URL: pricing.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="blog-grid-sidebar-left.html" class="search_link">Blog Grid Sidebar</a></h5>
-              <p>...Latest News in <span class="search">Travel</span> and Tourism Sort By: Newest Eldest View: Dubai: The Las Vegas of the Middle East? JUNE 20, 2016 by EMMA STONE How to Fi...</p>
-              <p class="match"><em>Terms matched: 9 - URL: blog-grid-sidebar-left.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="blog-modern.html" class="search_link">Blog Modern</a></h5>
-              <p>...Latest News in <span class="search">Travel</span> and Tourism Dubai: The Las Vegas of the Middle East or Something Completely Different? JUNE 20, 2016 by EMMA STONE Is i...</p>
-              <p class="match"><em>Terms matched: 9 - URL: blog-modern.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="blog-list-sidebar-left.html" class="search_link">Blog List Sidebar</a></h5>
-              <p>...Latest News in <span class="search">Travel</span> and Tourism Sort By: Newest Eldest View: Dubai: The Las Vegas of the Middle East? JUNE 20, 2016 by EMMA STONE Dubai. It...</p>
-              <p class="match"><em>Terms matched: 8 - URL: blog-list-sidebar-left.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="index-variant-3.html" class="search_link">Home Variant 3</a></h5>
-              <p>...e the World Sun<span class="search">Travel</span> offers a variety of tours and trips customized to the needs of modern <span class="search">travel</span>ers. Find the perfect tourWATCH THIS STORY ...</p>
-              <p class="match"><em>Terms matched: 7 - URL: index-variant-3.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="blog-list.html" class="search_link">Blog List</a></h5>
-              <p>...Latest News in <span class="search">Travel</span> and Tourism Sort By: Newest Eldest View: Dubai: The Las Vegas of the Middle East? JUNE 20, 2016 by EMMA STONE Dubai. It...</p>
-              <p class="match"><em>Terms matched: 7 - URL: blog-list.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="blog-single-post.html" class="search_link">Blog Single Post</a></h5>
-              <p>...ose Your Ideal <span class="search">Travel</span> Destination JUNE 20, 2016 by EMMA STONE How to Find the Best <span class="search">Travel</span> Deals JUNE 20, 2016 by EMMA STONE Planning a Trip t...</p>
-              <p class="match"><em>Terms matched: 6 - URL: blog-single-post.html</em></p>
-            </li>
-            <li class="result-item">
               <h5 class="search_title"><a target="_top" href="blog-single-post-sidebar-left.html" class="search_link">Blog Single Post Sidebar</a></h5>
               <p>...ose Your Ideal <span class="search">Travel</span> Destination JUNE 20, 2016 by EMMA STONE How to Find the Best <span class="search">Travel</span> Deals JUNE 20, 2016 by EMMA STONE Planning a Trip t...</p>
               <p class="match"><em>Terms matched: 6 - URL: blog-single-post-sidebar-left.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="tours-list.html" class="search_link">Tours List</a></h5>
-              <p>...ritain with Sun<span class="search">Travel</span> and discover the finest destinations it has to offer! Join a host of like-minded young <span class="search">travel</span>ling companions on one of ...</p>
-              <p class="match"><em>Terms matched: 4 - URL: tours-list.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="contacts.html" class="search_link">Contact Us</a></h5>
-              <p>...r Agency At Sun<span class="search">Travel</span> we want to make sure that your trip is everything you could possibly dream of. Whether you want inspiration and guidanc...</p>
-              <p class="match"><em>Terms matched: 4 - URL: contacts.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="404.html" class="search_link">404</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: 404.html</em></p>
             </li>
             <li class="result-item">
               <h5 class="search_title"><a target="_top" href="503.html" class="search_link">503</a></h5>
@@ -163,104 +134,9 @@
               <p class="match"><em>Terms matched: 2 - URL: 503.html</em></p>
             </li>
             <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="comingsoon.html" class="search_link">Coming Soon</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: comingsoon.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="contacts-variant-2.html" class="search_link">Contact Us V2</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: contacts-variant-2.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="destinations.html" class="search_link">Destinations</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: destinations.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="manitenance.html" class="search_link">Down for Maintenance</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: manitenance.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="forgot-password.html" class="search_link">Forgot Password?</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: forgot-password.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="gallery-cobbles.html" class="search_link">Gallery Cobbles</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: gallery-cobbles.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="gallery-fullwidth.html" class="search_link">Gallery Fullwidth</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: gallery-fullwidth.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="gallery-grid.html" class="search_link">Gallery Grid</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: gallery-grid.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="gallery-masonry.html" class="search_link">Gallery Masonry</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: gallery-masonry.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="login.html" class="search_link">Login</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: login.html</em></p>
-            </li>
-            <li class="result-item">
               <h5 class="search_title"><a target="_top" href="privacy.html" class="search_link">Privacy Policy</a></h5>
               <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
               <p class="match"><em>Terms matched: 2 - URL: privacy.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="search-results.html" class="search_link">Search results</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: search-results.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="signup.html" class="search_link">Sign Up</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: signup.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="signup-variant-2.html" class="search_link">Sign Up V2</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: signup-variant-2.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="sitemap.html" class="search_link">Site Map</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: sitemap.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="terms-of-use.html" class="search_link">Terms Of Use</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: terms-of-use.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="tours-single.html" class="search_link">Tour Single</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: tours-single.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="tours-grid.html" class="search_link">Tours Grid</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: tours-grid.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="tours-grid-variant-2.html" class="search_link">Tours Grid Variant 2</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: tours-grid-variant-2.html</em></p>
-            </li>
-            <li class="result-item">
-              <h5 class="search_title"><a target="_top" href="underconsruction.html" class="search_link">Under Construction</a></h5>
-              <p>... been offering <span class="search">travel</span> services of the highest quality, combining our energy and enthusiasm. Follow Us Subscribe × Subscribe to our newslette...</p>
-              <p class="match"><em>Terms matched: 2 - URL: underconsruction.html</em></p>
             </li>
           </ol>
         </div>
@@ -268,3 +144,69 @@
     </div>
   </section>
 {% endblock contents %}
+
+{% block scripts %}
+<script src="{% static 'js/typeahead.bundle.min.js' %}"></script>
+<script src="{% static 'js/datepicker.min.js' %}"></script>
+<script>
+    $(function(){
+      // https://github.com/fengyuanchen/datepicker
+      $('[data-toggle="datepicker"]').datepicker();
+
+      var substringMatcher = function(strs) {
+      return function findMatches(q, cb) {
+        var matches, substringRegex;
+
+        // an array that will be populated with substring matches
+        matches = [];
+
+        // regex used to determine if a string contains the substring `q`
+        substrRegex = new RegExp(q, 'i');
+
+        // iterate through the pool of strings and for any string that
+        // contains the substring `q`, add it to the `matches` array
+        $.each(strs, function(i, str) {
+          if (substrRegex.test(str)) {
+            matches.push(str);
+          }
+        });
+
+        cb(matches);
+      };
+    };
+
+    var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+      'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+      'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+      'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+      'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+      'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+      'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+      'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+    ];
+
+    var $input = $(".typeahead");
+      $input.typeahead({
+       
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'states',
+      source: substringMatcher(states)
+    });
+
+
+    })
+
+
+    
+
+
+
+
+  </script>
+ 
+{% endblock scripts %}
