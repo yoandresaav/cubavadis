@@ -62,7 +62,7 @@
 								</div>
 							</div>
 							<div class="col-lg-2">
-								<input type="submit" class="btn_search" value="Buscar">
+								<input type="submit" class="btn_search" id="btn_search" value="Buscar">
 							</div>
 						</div>
 						<!-- /row -->
@@ -486,7 +486,7 @@
 			}
 		});
 		
-		$('#form-reservacion').on('submit', function(e){
+		$('#btn_search').click(function(e){
 			e.preventDefault();
 			if ($('#autocomplete-origen').val() === ""){
 				toastr.error("Escoge una ciudad de origen en España!")
@@ -498,7 +498,7 @@
 				$('#autocomplete-destino').focus()
 				return false;
 			} 
-			$(this).submit();
+			$('#form-reservacion').submit();
 
 			return false;
 			$.post("{% url 'web:send_form_vuelos' %}", $(this).serialize())
