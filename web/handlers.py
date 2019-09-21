@@ -19,8 +19,14 @@ def handle_session_sky(data):
         if not origen or not destino or not dates or not pasajeros:
             raise Exception('Datos incompletos')
 
-        origen = Places.objects.filter(place_name=origen).first().place_id
-        destino = Places.objects.filter(place_name=destino).first().place_id
+        origen = Places.objects.filter(place_name=origen)
+        destino = Places.objects.filter(place_name=destino)
+        
+        if not origen or not destino:
+            raise Exception('El origen o el destino no existen')
+        
+        origen = origen.first().place_id
+        destino = destino.first().place_id
         # get dates
         dates = dates.split('>')
         print('la fecha es **%s**' % dates[0])

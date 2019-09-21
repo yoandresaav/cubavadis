@@ -1,11 +1,13 @@
 import json
+import time
 
 from django.views.generic import TemplateView
-from flights.search import create_api_session, get_poll_session_result
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
-from flights.search import create_api_session, get_place
+from django.contrib import messages
+
+from flights.search import create_api_session, get_place, get_poll_session_result
 
 from .handlers import handle_session_sky
 from .utils import convert_result_in_template_obj
@@ -16,10 +18,21 @@ class HomeView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         ctx = self.get_context_data(**kwargs)
-        data = handle_session_sky(request.POST)
-        key = create_api_session(**data)
-        if key:
-            return redirect('web:resultados_vuelos', perfil=key)
+        
+        try:
+            data = handle_session_sky(request.POST)
+        except:
+            data = None
+            messages.error(request, "La información proporcionada no es correcta.")
+        
+        if data:
+            try:
+                key = create_api_session(**data)
+                if key:
+                    time.sleep(7)
+                    return redirect('web:resultados_vuelos', perfil=key)
+            except:
+                messages.error(request, "Lo sentimos tenemos un error. Inténtalo otra vez")
         return self.render_to_response(ctx)
 
 
