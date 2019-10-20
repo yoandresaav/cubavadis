@@ -11,7 +11,7 @@ from flights.search import create_api_session, get_place, get_poll_session_resul
 
 from .handlers import handle_session_sky
 from .utils import convert_result_in_template_obj
-
+from .models import Tours
 
 class HomeView(TemplateView):
     template_name = 'panagea/index.html'
@@ -79,8 +79,13 @@ class ResultadosVuelosView(TemplateView):
             return redirect('web:home')
 
 
+class ToursCubaView(TemplateView):
+    template_name = 'panagea/tours-cuba.html'
 
-#link
+    def get_context_data(self, *args, **kwargs):
+        ctx = super().get_context_data(*args, **kwargs)
+        ctx['tours'] = Tours.objects.all()
+        return ctx
 
 
 """

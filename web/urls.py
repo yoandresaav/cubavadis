@@ -2,9 +2,15 @@ from django.urls import path
 from django.utils.translation import gettext_lazy as _
 from django.views.generic.base import TemplateView
 from .views import (
-    HomeView, ToursView, AboutView, GalleryView,
-    BlogView, ContactsView, SearchFlights,
-    ResultadosVuelosView
+    HomeView, 
+    ToursView, 
+    AboutView, 
+    GalleryView,
+    BlogView, 
+    ContactsView, 
+    SearchFlights,
+    ResultadosVuelosView,
+    ToursCubaView,
 )
 from .api import send_form_vuelos, retornador_respuesta_vuelos
 
@@ -21,6 +27,7 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('search-flights/', SearchFlights.as_view(), name='search-flights'),
     path(_('tours/'), ToursView.as_view(), name='tours'),
+    path('tours-cuba/', ToursCubaView.as_view(), name='tour-cuba'),
     path('about/', AboutView.as_view(), name='about'),
     path('gallery/', GalleryView.as_view(), name='gallery'),
     path('blog/', BlogView.as_view(), name='blog'),

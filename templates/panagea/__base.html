@@ -64,19 +64,7 @@
 		<nav id="menu" class="main-menu">
 			<ul>
 				<li><span><a href="{% url 'web:home' %}">Inicio</a></span></li>
-				<li><span><a href="#0">Vuelos</a></span>
-					<ul>
-						<li><a href="tours-grid-isotope.html">Tours grid isotope</a></li>
-						<li><a href="tours-grid-sidebar.html">Tours grid sidebar</a></li>
-						<li><a href="tours-grid-sidebar-2.html">Tours grid sidebar 2</a></li>
-						<li><a href="tours-grid.html">Tours grid simple</a></li>
-						<li><a href="tours-list-isotope.html">Tours list isotope</a></li>
-						<li><a href="tours-list-sidebar.html">Tours list sidebar</a></li>
-						<li><a href="tours-list-sidebar-2.html">Tours list sidebar 2</a></li>
-						<li><a href="tours-list.html">Tours list simple</a></li>
-						<li><a href="tour-detail.html">Tour detail</a></li>
-					</ul>
-				</li>
+				<li><span><a href="{% url 'web:tour-cuba'%}">Tours por Cuba</a></span></li>
 				<li><span><a href="#0">Alojamientos</a></span>
 					<ul>
 						<li><a href="#">Airbnb</a></li>
@@ -110,7 +98,9 @@
 				</li>
 			</ul>
 		</nav>
-
+		
+		{% block section_superior %}{% endblock section_superior %}
+			
 	</header>
 	<!-- /header -->
 	
