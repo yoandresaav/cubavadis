@@ -11,6 +11,7 @@ from .views import (
     SearchFlights,
     ResultadosVuelosView,
     ToursCubaView,
+    VisadoView,
 )
 from .api import send_form_vuelos, retornador_respuesta_vuelos
 
@@ -32,7 +33,7 @@ urlpatterns = [
     path('gallery/', GalleryView.as_view(), name='gallery'),
     path('blog/', BlogView.as_view(), name='blog'),
     path('contacts/', ContactsView.as_view(), name='contacts'),
-    path('contacts/', ContactsView.as_view(), name='contacts'),
+    path('visado/', VisadoView.as_view(), name='visado'),
     
 
     path('vuelos/<str:perfil>/', ResultadosVuelosView.as_view(), name='resultados_vuelos'),

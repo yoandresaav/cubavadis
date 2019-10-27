@@ -1088,7 +1088,7 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
 
 .hero_in {
   width: 100%;
-  height: 450px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1100,7 +1100,7 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
   }
 }
 .hero_in.general:before {
-  background: url(../img/hero_in_bg_2.jpg) center center no-repeat;
+  background: url(../img/nacionalidad-espanola-.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
